@@ -353,7 +353,6 @@ const links = [
         width: auto;
         height: 2.75rem;
         flex-shrink: 0;
-        margin-right: calc(var(--space-1) - var(--space-3));
       }
       .nav_brand > span {
         font-size: 0.875rem;
@@ -552,15 +551,16 @@ const links = [
           gap: var(--space-1);
           padding-inline: var(--space-2);
         }
-        .nav_brand > span {
-          display: none;
-        }
         .nav_brand strong {
-          font-size: clamp(1.5rem, 7vw, 1.875rem);
+          font-size: clamp(1rem, 3vw, 1.5rem);
+        }
+        .nav_brand > span {
+          display: block;
+          font-size: clamp(0.5625rem, 1.4vw, 0.875rem);
+          line-height: 1.1;
         }
         .nav_logo {
-          height: 1.875rem;
-          margin-right: 0;
+          height: clamp(1.375rem, 3.5vw, 1.875rem);
         }
         .nav_actions {
           gap: var(--space-3);
@@ -581,6 +581,7 @@ const links = [
         .nav_contact {
           align-self: center;
           padding-inline: var(--space-2);
+          font-size: clamp(0.6875rem, 3.5vw, 0.875rem);
         }
       }
       @media (prefers-reduced-motion: reduce) {

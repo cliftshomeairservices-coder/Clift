@@ -40,6 +40,7 @@ any scripts they need.
 - `lumos-scaling-graphic` — build an editable graphic that scales as one piece.
 - `lumos-import-webflow` — migrate a Webflow export and connect its CMS.
 - `lumos-upgrade-version` — upgrade Lumos without losing customizations.
+- `publish` — build the site, push the current branch to GitHub, then deploy to Cloudflare.
 
 `.agents/skills/` is the source of truth. Claude Code loads the same skills from
 relative symlinks in `.claude/skills/`. For each new skill, add
@@ -47,6 +48,6 @@ relative symlinks in `.claude/skills/`. For each new skill, add
 
 - Codex: use `$lumos-import-figma` or ask for the skill by name. Restart Codex
   if a new skill does not appear.
-- Claude Code: use `/lumos-import-figma` or let it load the skill when relevant.
+- Claude Code: use `/lumos-import-figma`, `/publish`, or let it load the skill when relevant.
 - Other assistants: read `SKILL.md` directly. Instructions are Markdown and
   scripts are Node.
